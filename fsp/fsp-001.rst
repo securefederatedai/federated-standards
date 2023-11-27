@@ -1,8 +1,12 @@
-FSP: 1
-Title: FSP Purpose and Guidelines
-Author: Patrick Foley, Daniel Beutel, Nic Lane, Micah Sheller
-Status: Draft
-Created: 27-Nov-2023
+**FSP**: 1
+
+**Title**: FSP Purpose and Guidelines
+
+**Author**: Patrick Foley, Daniel Beutel, Nic Lane, Micah Sheller
+
+**Status**: Draft
+
+**Created**: 27-Nov-2023
 
 What is an FSP?
 ===============
