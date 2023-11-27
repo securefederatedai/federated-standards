@@ -1,0 +1,68 @@
+FSP: 1
+Title: FSP Purpose and Guidelines
+Author: Patrick Foley, Daniel Beutel, Nic Lane, Micah Sheller
+Status: Draft
+Created: 27-Nov-2023
+
+What is an FSP?
+===============
+
+FSP stands for Federated Standard Proposal. The FSP format is strongly modeled after the 
+Python Enhancement Proposal (PEP) and Kubernetes Enhancement Proposal (KEP)
+processes - including verbiage in this document. 
+A FSP is a design document that provides information to the Federated Learning community,
+about a common framework standard or component. The FSP
+should provide a concise technical specification of the feature and a
+rationale for the feature.
+
+We intend FSPs to be the primary mechanisms for proposing common standards,
+for collecting community input on an issue, and for
+documenting the design decisions that have gone into common FL standards.  The FSP 
+author is responsible for building consensus within the community and
+documenting dissenting opinions.
+
+Because the FSPs are maintained as text files in a versioned
+repository, their revision history is the historical record of the
+feature proposal. This historical record is available by the normal git
+commands for retrieving older revisions, and can also be browsed
+`on GitHub <https://github.com/securefederatedai/federated-standards>`__.
+
+FSP Audience
+============
+
+The typical primary audience for FSPs are the core developers of federated learning 
+frameworks, with input from academic researchers, industry, other community stakeholders.  
+
+However, other parts of the federated learning community may also choose to use the process
+(particularly for Informational FSPs) to document expected API conventions and
+to manage complex design coordination problems that require collaboration across
+multiple projects.
+
+FSP Types
+=========
+
+There are three kinds of FSPs:
+
+
+1. An **Informational** FSP describes a common design issue, or
+   provides general guidelines or information to the federated learning
+   community, but does not propose a new standard.  Informational FSPs do not
+   necessarily represent a Python community consensus or
+   recommendation, so users and implementers are free to ignore
+   Informational PEPs or follow their advice.
+
+2. A **Standards Track** FSP describes an interoperability standard that 
+   will be supported by two federated learning frameworks. Approval from 
+   from two identified federated learning framework representitives is needed 
+   before an FSP PR can be merged. 
+
+3. A **Component Implementation** FSP goes one step further than the 
+   standards track and provides a reference implementation of the feature described.
+   Closure of an component implementation FSP PR requires two links to
+   FL Framework PRs that implement that component. 
+
+Because the barrier to Standards Track and Component Implementation FSPs is high,
+we expect many FSP to start as Informational, graduate to Standards Track with a new PR,
+and finally become Component Implementation once FL framework authors have reached agreement.
+
+
