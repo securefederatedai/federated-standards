@@ -9,7 +9,7 @@ What is an FSP?
 
 FSP stands for Federated Standard Proposal. The FSP format is strongly modeled after the 
 Python Enhancement Proposal (PEP) and Kubernetes Enhancement Proposal (KEP)
-processes - including verbiage in this document. 
+processes - which includes verbiage in this document. 
 A FSP is a design document that provides information to the Federated Learning community,
 about a common framework standard or component. The FSP
 should provide a concise technical specification of the feature and a
