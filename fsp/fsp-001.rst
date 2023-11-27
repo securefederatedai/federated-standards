@@ -47,9 +47,9 @@ There are three kinds of FSPs:
 1. An **Informational** FSP describes a common design issue, or
    provides general guidelines or information to the federated learning
    community, but does not propose a new standard.  Informational FSPs do not
-   necessarily represent a Python community consensus or
+   necessarily represent a FL community consensus or
    recommendation, so users and implementers are free to ignore
-   Informational PEPs or follow their advice.
+   Informational FSPs or follow their advice.
 
 2. A **Standards Track** FSP describes an interoperability standard that 
    will be supported by two federated learning frameworks. Approval from 
