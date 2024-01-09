@@ -1,0 +1,150 @@
+**FSP**: 1
+
+**Title**: FSP Purpose and Guidelines
+
+**Author**: Patrick Foley, Daniel Beutel, Nic Lane, Micah Sheller
+
+**Status**: Draft
+
+**Created**: 27-Nov-2023
+
+What is an FSP?
+===============
+
+FSP stands for Federated Standard Proposal. The FSP format is intended to be a simplified version
+of  the Python Enhancement Proposal (PEP) and Kubernetes Enhancement Proposal (KEP)
+processes - and significant verbiage in this document comes directly from `PEP1 <https://peps.python.org/pep-0001/>`__. 
+A FSP is a design document that provides information to the Federated Learning community,
+about a common framework standard or component. The FSP
+should provide a concise technical specification of the feature and a
+rationale for the feature.
+
+We intend FSPs to be the primary mechanisms for proposing common standards,
+for collecting community input on an issue, and for
+documenting the design decisions that have gone into common FL standards.  The FSP 
+author is responsible for building consensus within the community and
+documenting dissenting opinions.
+
+Because the FSPs are maintained as text files in a versioned
+repository, their revision history is the historical record of the
+feature proposal. This historical record is available by the normal git
+commands for retrieving older revisions, and can also be browsed
+`on GitHub <https://github.com/securefederatedai/federated-standards>`__.
+
+FSP Audience
+============
+
+The typical primary audience for FSPs are the core developers of federated learning 
+frameworks, with input from academic researchers, industry, other community stakeholders.  
+
+However, other parts of the federated learning community may also choose to use the process
+(particularly for Informational FSPs) to document expected API conventions and
+to manage complex design coordination problems that require collaboration across
+multiple projects.
+
+FSP Types
+=========
+
+There are three kinds of FSPs:
+
+
+1. An **Informational** FSP describes a common design issue, or
+   provides general guidelines or information to the federated learning
+   community, but does not propose a new standard.  Informational FSPs do not
+   necessarily represent a FL community consensus or
+   recommendation, so users and implementers are free to ignore
+   Informational FSPs or follow their advice.
+
+2. A **Standards Track** FSP describes an interoperability standard that 
+   will be supported by two federated learning frameworks. Approval from 
+   from two identified federated learning framework representitives is needed 
+   before an FSP PR can be merged. 
+
+3. A **Component Implementation** FSP goes one step further than the 
+   standards track and provides a reference implementation of the feature described.
+   Closure of an component implementation FSP PR requires two links to
+   FL Framework PRs that implement that component. 
+
+Because the barrier to Standards Track and Component Implementation FSPs is high,
+we expect many FSP to start as Informational, graduate to Standards Track with a new PR,
+and finally become Component Implementation once FL framework authors have reached agreement.
+
+FSP Workflow
+============
+
+Start with an idea or common problem
+------------------------------------
+
+The FSP process begins with a new idea for a federated standard, common issue, etc. It is highly recommended that a single FSP contain a single key proposal or new idea; the more focused the FSP, the easier it will be to review and will have higher likelihood of acceptance. The FSP reviewers reserve the right to reject FSP proposals if they appear too unfocused or too broad. If in doubt, split your FSP into several well-focused ones.
+
+Submitting an FSP
+=================
+
+The standard FSP workflow is:
+
+* You, the FSP author, fork the `federated-standards repository`_, and create a file named
+  :file:`fsp-{NNN}.rst` that contains your new FSP.  :samp:`{NNN}` should be the next
+  available FSP number not used by a published or in-PR FSP.
+
+* In the "FSP:" header field, enter the FSP number that matches your filename
+  as your draft FSP number.
+
+* In the "Type:" header field, enter "Standards Track",
+  "Informational", or "Component Implementation" as appropriate, and for the "Status:"
+  field enter "Draft".  For full details, see `FSP Header Preamble`_.
+
+* Push this to your GitHub fork and submit a pull request.
+
+* The FSP reviewers will evaluate your PR for structure, formatting, and other
+  errors. Approval criteria are:
+
+  * It is sound and complete. The ideas must make technical sense.  The
+    editors do not consider whether they seem likely to be accepted.
+  * The title accurately describes the content.
+  * The FSP's language (spelling, grammar, sentence structure, etc.)
+    and any reference code correct. The PEP text will be automatically checked for
+    correct reStructuredText formatting when the pull request is submitted.
+    PEPs with invalid reST markup will not be approved.
+
+  Editors are generally quite lenient about this initial review,
+  expecting that problems will be corrected by the reviewing process.
+  **Note:** Approval of the FSP is no guarantee that there are no
+  embarrassing mistakes!  Correctness is the responsibility of authors
+  and reviewers, not the editors.
+
+  If the FSP isn't ready for approval, an editor will send it back to
+  the author for revision, with specific instructions.
+
+* Once approved, they will assign your FSP a number.
+
+Once the review process is complete, and the FSP reviewers approve it (note that
+this is *not* the same as accepting your FSP!), they will squash commit your
+pull request onto main.
+
+The FSP reviewers will not unreasonably deny publication of a FSP.  Reasons for
+denying FSP status include duplication of effort, being technically unsound,
+not providing proper motivation or addressing backwards compatibility.
+
+Developers with write access to the `federated-standards repository`_ may claim FSP 
+numbers directly by creating and committing a new FSP. When doing so, the
+developer must handle the tasks that would normally be taken care of by the
+FSP reviewers (see `FSP Reviewer Responsibilities & Workflow`_). This includes
+ensuring the initial version meets the expected standards for submitting a
+FSP.  Alternately, even developers should submit FSPs via pull request.
+When doing so, you are generally expected to handle the process yourself.
+
+As updates are necessary, the FSP author can check in new versions if they
+(or a collaborating developer) have write access to the `federated-standards repository`_.
+Getting a FSP number assigned early can be useful for ease of
+reference, especially when multiple draft FSPs are being considered at the
+same time.
+
+Standards Track FSPs consist of at least a design document and optionally a
+reference implementation.  It is generally recommended that at least a
+prototype implementation be co-developed with the FSP, as ideas that sound
+good in principle sometimes turn out to be impractical when subjected to the
+test of implementation. Component Implementation Track FSPs must always include 
+a reference implementation and direct links of the component in 2+ federated 
+learning repositories.
+
+
